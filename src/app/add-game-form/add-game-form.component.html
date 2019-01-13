@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <form name="gameForm">
+      <div class="row">
+        <div class="col-xs-12 form-group">
+
+          <label for="fileinput">Game file</label>
+          <input name="fileinput"
+                 type="file"
+                 class="form-control-file"
+                 required
+                 #fileInput>
+          <label for="players">Players</label>
+          <input name="players"
+                 type="text"
+                 class="form-control"
+                 required
+                 #playersInput>
+          <label for="note">Notes</label>
+          <input name="note"
+                 type="text"
+                 class="form-control"
+                 #notesInput>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success"
+                  type="submit"
+                  [disabled]="!submitAllowed"
+          (click)="onSubmit()">
+            Add game
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <hr>
+</div>
+

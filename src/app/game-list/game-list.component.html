@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-12">
+    <a *ngFor="let savedGame of savedGames" href="#" class="list-group-item clearfix">
+      <h4 class="list-group-item-heading">Pelin nimi</h4>
+      <p class="list-group-item-text"><span style="font-weight: bold">Id: </span>{{ savedGame.id}}</p>
+      <p class="list-group-item-text"><span style="font-weight: bold">Players: </span>{{savedGame.players}}</p>
+      <p class="list-group-item-text"><span style="font-weight: bold">Note: </span>{{savedGame.note}}</p>
+      <div class="pull-right">
+        <button class="btn-danger btn">Delete</button>
+        <button class="btn-warning btn">Edit</button>
+        <button class="btn btn-success">Download</button>
+      </div>
+    </a>
+
+  </div>
+</div>
