@@ -6,19 +6,19 @@
         <div class="col-xs-12 form-group">
 
           <label for="fileinput">Game file</label>
-          <input name="fileinput"
+          <input id="fileinput"
                  type="file"
                  class="form-control-file"
                  required
                  #fileInput>
           <label for="players">Players</label>
-          <input name="players"
+          <input id="players"
                  type="text"
                  class="form-control"
                  required
                  #playersInput>
           <label for="note">Notes</label>
-          <input name="note"
+          <input id="note"
                  type="text"
                  class="form-control"
                  #notesInput>
@@ -29,7 +29,7 @@
           <button class="btn btn-success"
                   type="submit"
                   [disabled]="!submitAllowed"
-          (click)="onSubmit()">
+          (click)="onSubmit(fileInput, playersInput, notesInput, $event)">
             Add game
           </button>
         </div>

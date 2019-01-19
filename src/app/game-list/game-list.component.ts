@@ -11,16 +11,12 @@ export class GameListComponent implements OnInit {
     new SavedGame(88, 'Joonas, Juuso, Vellu', 'filename/path', 'Joonas: watch out for purple \n Vellu: Tutki underground \n Juuso: Lähetä Vellulle kultaa')
   ];
 
-  onSubmit(e){
-    console.log("yay!");
-    // newGame = new SavedGame()
-    // this.savedGames.push(newGame)
+  onGameAdded(game: { game: SavedGame }) {
+    console.log(game);
+    this.savedGames.push(game.game);
+    console.log(game.game);
   }
 
-  constructor() {
+  ngOnInit(): void {
   }
-
-  ngOnInit() {
-  }
-
 }
