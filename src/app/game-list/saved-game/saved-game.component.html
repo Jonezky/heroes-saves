@@ -1,1 +1,11 @@
-<p>Saved game component works</p>
+<a class="list-group-item clearfix">
+  <h4 class="list-group-item-heading">{{game.dateAdded}}</h4>
+  <p class="list-group-item-text"><span style="font-weight: bold">Id: </span>{{ game.id}}</p>
+  <p class="list-group-item-text"><span style="font-weight: bold">Players: </span>{{game.players}}</p>
+  <p class="list-group-item-text"><span style="font-weight: bold">Note: </span>{{game.note}}</p>
+  <div class="pull-right">
+    <button class="btn-danger btn" (click)="onClickDelete(game)">Delete</button>
+    <button class="btn-warning btn">Edit</button>
+    <button class="btn btn-success">Download</button>
+  </div>
+</a>

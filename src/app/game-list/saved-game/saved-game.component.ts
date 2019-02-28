@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {SavedGame} from '../saved-game.model';
+import {GamesService} from '../../games.service';
 
 @Component({
   selector: 'app-saved-game',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./saved-game.component.css']
 })
 export class SavedGameComponent implements OnInit {
+  @Input() game: SavedGame;
 
-  constructor() { }
+  constructor(private gamesService: GamesService) {
+  }
 
   ngOnInit() {
   }
 
+  onClickDelete(game: SavedGame) {
+    this.gamesService.deleteGame(game);
+  }
 }

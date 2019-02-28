@@ -7,6 +7,7 @@ import { SavedGameComponent } from './game-list/saved-game/saved-game.component'
 import { GameListComponent } from './game-list/game-list.component';
 import { HeaderComponent } from './header/header.component';
 import { AddGameFormComponent } from './add-game-form/add-game-form.component';
+import {GamesService} from './games.service';
 
 @NgModule({
   declarations: [
